@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { CalendarComponent } from './calendar/calendar.component';
+import { MiniCalendarModule } from './lib/mini-calendar.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CalendarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    MiniCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

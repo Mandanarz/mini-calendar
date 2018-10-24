@@ -1,6 +1,6 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarComponent } from './lib/calendar/calendar.component';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
@@ -20,6 +20,8 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
     el = fixture.debugElement;
+
+    fixture.detectChanges();
   })
 
   it('should create the app', async(() => {
@@ -31,7 +33,6 @@ describe('AppComponent', () => {
   it('should include the mini calendar inside the app', async(() => {
     const calendarComponent = el.query(By.directive(CalendarComponent));
     expect(calendarComponent).toBeTruthy();
-    console.log(calendarComponent.nativeElement.outerHTML);
   }));
 
 });

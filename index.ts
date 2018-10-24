@@ -1,0 +1,1 @@
+export { MiniCalendarModule } from './src/app/lib/mini-calendar.module';
