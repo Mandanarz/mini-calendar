@@ -1,0 +1,23 @@
+
+<div class="month">
+  <ul>
+    <li>
+      <span class="left hook"></span>
+      <span class="right hook"></span>
+      <img src="assets/img/{{currentMonth}}.jpg">
+      <div class="top-centered">{{currentYear}}</div>
+      <span class="prev" (click)="getPreviousMonth()">&#10094;</span>
+      <span class="month-name">{{currentMonth}}</span>
+      <span class="next" (click)="getNextMonth()">&#10095;</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li *ngFor="let day of weekdays">{{day}}</li>
+</ul>
+
+<ul class="days">
+  <li *ngFor="let emptyDay of daysBeforeFirstDay"></li>
+  <li *ngFor="let dayNumber of allDays" [class.active]="isToday(dayNumber)">{{dayNumber}}</li>
+</ul>
